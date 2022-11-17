@@ -37,9 +37,9 @@ class game():
         valid_inp = True
         while valid_inp:
             self.__p_agian = input("Play Again? [ y / n  ]: ")
-            if self.__p_agian.lower() == "y":
+            if self.__p_agian.lower() == "y" or "Y":
                 return True
-            elif self.__p_agian.lower() == "n":
+            elif self.__p_agian.lower() == "n" or "N":
                 return False
             else:
                 print("Huh?, I don't Understand that input, please try again")
@@ -48,7 +48,7 @@ class game():
         choices = [self.__rock, self.__paper, self.__scissors]
         play = True
         while play:
-            # Select a random object of the three objects
+            # Select a random option of the three possible options
             computer = random.choice(choices) 
             player = self.user_choice()
             if player == computer:
